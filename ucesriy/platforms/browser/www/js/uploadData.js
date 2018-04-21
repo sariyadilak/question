@@ -26,6 +26,12 @@ var postString = "question="+question +"&choice_1="+choice_1+"&choice_2="+choice
 	if (document.getElementById("4").checked) {
  		 postString=postString+"&answer="+4;
 	}
+
+// now get the geometry values
+	var latitude = document.getElementById("latitude").value;
+	var longitude = document.getElementById("longitude").value;
+	postString = postString + "&latitude=" + latitude + "&longitude=" +longitude;
+	
 processData(postString);
 }
 

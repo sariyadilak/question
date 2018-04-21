@@ -6,13 +6,26 @@ function startDataUpload() {
 	var choice_2 = document.getElementById("choice_2").value;
 	var choice_3 = document.getElementById("choice_3").value;
 	var choice_4 = document.getElementById("choice_4").value;
-	var answer = document.getElementById("answer").value;
 	
 	
 
 	alert(question + " "+ choice_1 + " "+choice_2+ " "+choice_3+ " "+choice_4);
 	
 var postString = "question="+question +"&choice_1="+choice_1+"&choice_2="+choice_2+"&choice_3="+choice_3+"&choice_4="+choice_4;
+
+// now get the radio button values
+	if (document.getElementById("1").checked) {
+ 		 postString=postString+"&answer="+1;
+	}
+	if (document.getElementById("2").checked) {
+ 		 postString=postString+"&answer="+2;
+	}
+	if (document.getElementById("3").checked) {
+ 		 postString=postString+"&answer="+3;
+	}
+	if (document.getElementById("4").checked) {
+ 		 postString=postString+"&answer="+4;
+	}
 processData(postString);
 }
 

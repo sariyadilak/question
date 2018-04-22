@@ -52,3 +52,13 @@ function dataUploaded() {
     document.getElementById("dataUploadResult").innerHTML = client.responseText;
     }
 }
+
+function resetData(){
+	document.getElementById("question").value = "";
+	document.getElementById("choice_1").value = "";
+	document.getElementById("choice_2").value = "";
+	document.getElementById("choice_3").value = "";
+	document.getElementById("choice_4").value = "";
+	document.getElementById("latitude").value = "";
+	document.getElementById("longitude").value = "";
+}

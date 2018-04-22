@@ -15,7 +15,10 @@ if (navigator.geolocation) {
 }
 var marker;
 function showPosition(position) {
-	marker = L.marker([position.coords.latitude, position.coords.longitude]).addTo(mymap);
+	  if (marker) { // check
+        mymap.removeLayer(marker); // remove
+    }
+	marker = new L.marker([position.coords.latitude, position.coords.longitude]).addTo(mymap);
 	marker
 	mymap.panTo(new L.LatLng(position.coords.latitude, position.coords.longitude), 18)
 	var latitude = position.coords.latitude;

@@ -59,6 +59,10 @@ function resetData(){
 	document.getElementById("choice_2").value = "";
 	document.getElementById("choice_3").value = "";
 	document.getElementById("choice_4").value = "";
+	document.getElementById("1").checked = false;
+	document.getElementById("2").checked = false;
+	document.getElementById("3").checked = false;
+	document.getElementById("4").checked = false;
 	document.getElementById("latitude").value = "";
 	document.getElementById("longitude").value = "";
 }

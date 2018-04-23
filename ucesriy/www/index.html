@@ -71,20 +71,18 @@
 	<link rel="stylesheet"href="./css/ionicons.min.css">
 	<link rel="stylesheet"href="./css/leaflet.awesome-markers.css">
 	<script src="./js/leaflet.awesome-markers.js"></script>
-  </head>
-  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+	</head>
+	<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        <div class="mdl-layout__header-row">
         </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3>Question Form Creation</h3>
+        <div class="mdl-layout__header-row">
+          <h4>Question Form Creation</h4>
         </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        <div class="mdl-layout__header-row">
         </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-          <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
-        </div>
+
       </header>
 	  
       <main class="mdl-layout__content">
@@ -104,11 +102,11 @@
               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
                 <h4 class="mdl-cell mdl-cell--12-col">Form Question</h4>
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-				<label for="question">Question</label><input type="text" size="80" id="question"/><br />
-				<label for="choice_1">Choice1</label><input type="text" size="80" id="choice_1"/><br/>
-				<label for="choice_2">Choice2</label><input type="text" size="80" id="choice_2"/><br/>
-				<label for="choice_3">Choice3</label><input type="text" size="80" id="choice_3"/><br/>
-				<label for="choice_4">Choice4</label><input type="text" size="80" id="choice_4"/><br/>
+				<label for="question">Question</label><input type="text" size="25" id="question"/><br />
+				<label for="choice_1">Choice1</label><input type="text" size="25" id="choice_1"/><br/>
+				<label for="choice_1">Choice2</label><input type="text" size="25" id="choice_2"/><br/>
+				<label for="choice_3">Choice3</label><input type="text" size="25" id="choice_3"/><br/>
+				<label for="choice_4">Choice4</label><input type="text" size="25" id="choice_4"/><br/>
 				<label for="question">Answer</label><br/>
 				Choice 1: <input type="radio" name="amorpm" id="1" /><br />
 				Choice 2: <input type="radio" name="amorpm" id="2" /><br />
@@ -126,13 +124,13 @@
             <div class="mdl-card mdl-cell mdl-cell--12-col">
               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
 		  <!--the mapid div will hold the map-->
-		<div id="mapid" style="width: 1000px; height: 500px;"></div>
+		<div id="mapid" style="width: 500px; height: 400px;"></div>
 		<!-- the following script will load the map and set the default view and zoom, as well as loading the basemap tiles -->
 		<script src="js/appActivity.js"></script>
 		<script src="./js/uploadData.js"> </script>
 		<div class="mdl-card__actions">
 		<!--button for track location and drag location-->
-		<label for="latitude">Latitude</label><input type="text" size="25" id="latitude"/>
+		<label for="latitude">Latitude</label><input type="text" size="25" id="latitude"/><br />	
 		<label for="longitude">Longitude</label><input type="text" size="25" id="longitude"/><br />	
         <a href="#" class="mdl-button"onclick='trackLocation();return'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person_pin_circle</i>Track my location</a>
 		<a href="#" class="mdl-button"onclick='clearMap();return'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">layers_clear</i>Refresh Map</a>

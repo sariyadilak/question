@@ -54,15 +54,15 @@ function dataUploaded() {
 }
 
 function resetData(){
-	document.getElementById("question").value = "";
-	document.getElementById("choice_1").value = "";
-	document.getElementById("choice_2").value = "";
-	document.getElementById("choice_3").value = "";
-	document.getElementById("choice_4").value = "";
+	document.getElementById("question").value = null;
+	document.getElementById("choice_1").value = null;
+	document.getElementById("choice_2").value = null;
+	document.getElementById("choice_3").value = null;
+	document.getElementById("choice_4").value = null;
 	document.getElementById("1").checked = false;
 	document.getElementById("2").checked = false;
 	document.getElementById("3").checked = false;
 	document.getElementById("4").checked = false;
-	document.getElementById("latitude").value = "";
-	document.getElementById("longitude").value = "";
+	document.getElementById("latitude").value = null;
+	document.getElementById("longitude").value = null;
 }

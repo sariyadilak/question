@@ -114,37 +114,36 @@
 				Choice 2: <input type="radio" name="amorpm" id="2" /><br />
 				Choice 3: <input type="radio" name="amorpm" id="3" /><br />
 				Choice 4: <input type="radio" name="amorpm" id="4" /><br />
-				<label for="latitude">Latitude</label><input type="text" size="25" id="latitude"/><br />
-				<label for="longitude">Longitude</label><input type="text" size="25" id="longitude"/><br />
-				<div id="dataUploadResult">Upload Result</div>
               </div>
             </div>
 			<div class="mdl-card__actions">
-                <a href="#" class="mdl-button"onclick='startDataUpload();return'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">publish</i>Start Upload</a>
-			</div>
-			<div class="mdl-card__actions">
-                <a href="#" class="mdl-button"onclick='resetData();return'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">loop</i>Refresh Form</a>
-				<script src="./js/uploadData.js"> </script>
-            </div>
+				 <a href="#" class="mdl-button"onclick='resetData();return'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">loop</i>Refresh Form</a>
+			</div>   
+				
           </section>
 		
 		<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
-			<div class="mdl-card__actions">
-        <a href="#" class="mdl-button"onclick='trackLocation();return'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person_pin_circle</i>Track my location</a>
-        </div>
-		<div class="mdl-card__actions">
-		<a href="#" class="mdl-button"onclick='clearMap();return'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">layers_clear</i>Refresh Map</a>
-        </div>
               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
 		  <!--the mapid div will hold the map-->
 		<div id="mapid" style="width: 1000px; height: 500px;"></div>
 		<!-- the following script will load the map and set the default view and zoom, as well as loading the basemap tiles -->
 		<script src="js/appActivity.js"></script>
+		<script src="./js/uploadData.js"> </script>
+		<div class="mdl-card__actions">
 		<!--button for track location and drag location-->
-        </div>
+		<label for="latitude">Latitude</label><input type="text" size="25" id="latitude"/>
+		<label for="longitude">Longitude</label><input type="text" size="25" id="longitude"/><br />	
+        <a href="#" class="mdl-button"onclick='trackLocation();return'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person_pin_circle</i>Track my location</a>
+		<a href="#" class="mdl-button"onclick='clearMap();return'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">layers_clear</i>Refresh Map</a>
+		</div>
+		</div>
+		<div class="mdl-card__actions">
+		<a href="#" class="mdl-button"onclick='startDataUpload();return'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">publish</i>Start Upload</a>
+		<div id="dataUploadResult">Upload Result</div>
 		</div>
 		</section>
+		
 		
               
     </main>	

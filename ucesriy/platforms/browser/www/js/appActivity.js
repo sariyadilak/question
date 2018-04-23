@@ -8,7 +8,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 //track user location on the map
 function trackLocation() {
 if (navigator.geolocation) {
-	navigator.geolocation.watchPosition(showPosition);
+	navigator.geolocation.getCurrentPosition(showPosition);
 } else {
 	document.getElementById('showLocation').innerHTML = "Geolocation is not supported by this browser.";
 	}
@@ -48,4 +48,9 @@ function clearMap(){
  if (marker) { // check
         mymap.removeLayer(marker); // remove
     }
+	var latitude = marker.getLatLng().lat;
+	var longitude = marker.getLatLng().lng;
+	//delete location from form
+	document.getElementById("latitude").value = null ;
+	document.getElementById("longitude").value = null;
 }

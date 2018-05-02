@@ -1,3 +1,12 @@
+/*
+*    Title: week6formcode
+*    Author:Ellul,C
+*    Date: 20/04/2018
+*    Availability: https://github.com/claireellul/cegeg077-week6formcode/blob/master/ucfscde/www/js/uploadData.js
+*
+*/
+
+//get value that fill user fills in html
 function startDataUpload() {
 	alert ("start data upload");
 
@@ -37,6 +46,7 @@ processData(postString);
 
 var client;
 
+//post the string to http server
 function processData(postString) {
    client = new XMLHttpRequest();
    client.open('POST','http://developer.cege.ucl.ac.uk:30281/uploadData',true);
@@ -53,6 +63,7 @@ function dataUploaded() {
     }
 }
 
+//reset data function
 function resetData(){
 	document.getElementById("question").value = null;
 	document.getElementById("choice_1").value = null;

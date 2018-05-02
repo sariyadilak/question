@@ -13,31 +13,33 @@ if (navigator.geolocation) {
 	document.getElementById('showLocation').innerHTML = "Geolocation is not supported by this browser.";
 	}
 }
+
 var marker;
 function showPosition(position) {
-	  if (marker) { // check
-        mymap.removeLayer(marker); // remove
+	  if (marker) { // check if there is marker on the map, or not
+        mymap.removeLayer(marker); // remove the marker
     }
-	marker = new L.marker([position.coords.latitude, position.coords.longitude]).addTo(mymap);
+	marker = new L.marker([position.coords.latitude, position.coords.longitude]).addTo(mymap); //add user's location marker
 	marker
-	mymap.panTo(new L.LatLng(position.coords.latitude, position.coords.longitude), 18)
+	mymap.panTo(new L.LatLng(position.coords.latitude, position.coords.longitude), 18) //pan the map to user's location marker
+	//define latitude and longitude variable
 	var latitude = position.coords.latitude;
 	var longitude = position.coords.longitude;
-//add location to html
+	//add value to html
 	document.getElementById("latitude").value = latitude ;
 	document.getElementById("longitude").value = longitude;
 }
 
 //add dragger for user to choose location on the map
-//adapt the code from https://stackoverflow.com/questions/27271994/leaflet-draggable-marker-and-coordinates-display-in-a-field-form
 mymap.on('click', function (e) {
     if (marker) { // check
-        mymap.removeLayer(marker); // remove
+        mymap.removeLayer(marker); // remove the marker from the map
     }
-    marker = new L.Marker(e.latlng, { draggable: true }).addTo(mymap);	// set
+    marker = new L.Marker(e.latlng, { draggable: true }).addTo(mymap);	// add the draggable marker, when clicking on the map
+	//define latitude and longitude variable
 	var latitude = marker.getLatLng().lat;
 	var longitude = marker.getLatLng().lng;
-	//add location to html
+	//add value to html
 	document.getElementById("latitude").value = latitude ;
 	document.getElementById("longitude").value = longitude;
 });
@@ -46,11 +48,11 @@ mymap.on('click', function (e) {
 //clear map
 function clearMap(){
  if (marker) { // check
-        mymap.removeLayer(marker); // remove
+        mymap.removeLayer(marker); // remove marker on the layer
     }
 	var latitude = marker.getLatLng().lat;
 	var longitude = marker.getLatLng().lng;
-	//delete location from form
-	document.getElementById("latitude").value = null ;
+	//delete value from the form
+	document.getElementById("latitude").value = null ; 
 	document.getElementById("longitude").value = null;
 }

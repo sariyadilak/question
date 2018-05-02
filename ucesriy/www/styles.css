@@ -77,10 +77,12 @@ html, body {
   padding: 0;
   color: inherit;
   width: calc(100% - 80px);
+  line-height: 18pt;
 }
 .mdl-demo.mdl-demo .mdl-card__supporting-text h4 {
   margin-top: 0;
   margin-bottom: 20px;
+  line-height: 18pt;
 }
 .mdl-demo .mdl-card__actions {
   margin: 0;
@@ -201,10 +203,7 @@ html, body {
 .mdl-demo .mdl-card .mdl-card__supporting-text > h3:first-child {
   margin-bottom: 24px;
 }
-.mdl-demo .mdl-layout__tab-panel:not(#overview) {
-  background-color: white;
 
-}
 }
 .mdl-demo #features section {
   margin-bottom: 72px;
